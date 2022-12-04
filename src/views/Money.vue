@@ -16,7 +16,7 @@ import NumberPad from '@/components/Money/NumberPad.vue';
     components: {Tags, Notes, Types, NumberPad},
     data() {
       return {
-        tags: ['衣', '食', '住', '行', '彩票']
+        tags: ['衣', '食', '住', '行','喝']
       }
     }
   }
