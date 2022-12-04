@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    Money.vue
+    <p>Money.vue</p>
   </Layout>
 </template>
 
@@ -10,3 +10,9 @@
   }
 </script>
 
+<<style lang="scss" scoped>
+@import "~@/assets/style/helper.scss";
+p{
+  color: $red;
+}
+</style>
