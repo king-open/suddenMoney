@@ -27,6 +27,7 @@ import NumberPad from '@/components/Money/NumberPad.vue';
   })
   export default class Money extends Vue {
     tags = tagList;
+
     // eslint-disable-next-line no-undef
     recordList: RecordItem[] = recordList;
     // eslint-disable-next-line no-undef
