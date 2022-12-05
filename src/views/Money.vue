@@ -9,6 +9,8 @@
       />
     </div>
     <Tags/>
+    {{count}}
+    <button @click="add">+1</button>
   </Layout>
 </template>
 
@@ -22,11 +24,21 @@ import NumberPad from '@/components/Money/NumberPad.vue';
   import store from '@/store/index2.ts';
 
   @Component({
-    components: {Tags, FormItem, Types, NumberPad}
+    components: {Tags, FormItem, Types, NumberPad},
+    computed: {
+      count() {
+        return store.count;
+      },
+      recordList() {
+        return store.recordList;
+      }
+    }
   })
   export default class Money extends Vue {
     // eslint-disable-next-line no-undef
-    recordList = store.recordList;
+    add() {
+      store.addCount();
+    }
     // eslint-disable-next-line no-undef
     record: RecordItem = {
       tags: [], notes: '', type: '-', amount: 0
