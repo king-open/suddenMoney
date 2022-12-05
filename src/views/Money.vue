@@ -23,14 +23,14 @@ import NumberPad from '@/components/Money/NumberPad.vue';
   import tagListModel from '@/models/tagListModel';
 
   const recordList = recordListModel.fetch();
-  const tagList = tagListModel.fetch();
+  
 
 
   @Component({
     components: {Tags, FormItem, Types, NumberPad}
   })
   export default class Money extends Vue {
-    tags = tagList;
+    tags = window.tagList;
     // eslint-disable-next-line no-undef
     recordList: RecordItem[] = recordList;
     // eslint-disable-next-line no-undef
