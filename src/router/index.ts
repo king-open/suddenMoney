@@ -26,7 +26,7 @@ const routes: Array<RouteConfig> = [
     component:Statistics
   },
   {
-    path:'/labels/edi',
+    path: '/labels/edit/:id',
     component:EditLabel
   },
   {
