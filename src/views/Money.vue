@@ -48,7 +48,7 @@ import NumberPad from '@/components/Money/NumberPad.vue';
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .layout-content {
     display: flex;
     flex-direction: column-reverse;
