@@ -19,15 +19,19 @@ import NumberPad from '@/components/Money/NumberPad.vue';
   import FormItem from '@/components/Money/FormItem.vue';
   import Tags from '@/components/Money/Tags.vue';
   import {Component} from 'vue-property-decorator';
+  import Tabs from '@/components/Tabs.vue';
+  import recordTypeList from '@/constants/recordTypeList';
+
 
 
   @Component({
-    components: {Tags, FormItem, Types, NumberPad},
+    components: {Tabs,Tags, FormItem, Types, NumberPad},
   })
   export default class Money extends Vue {
     get recordList() {
       return this.$store.state.recordList;
     }
+    recordTypeList = recordTypeList;
     // eslint-disable-next-line no-undef
     record: RecordItem = {
       tags: [], notes: '', type: '-', amount: 0
