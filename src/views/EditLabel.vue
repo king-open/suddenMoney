@@ -24,14 +24,15 @@
  
 
   @Component({
-    components: {FormItem,Button}
+    components: {FormItem,Button},
   })
   export default class EditLabel extends Vue {
-    tag?: Tag = undefined;
+    get tag() {
+      return this.$store.state.currentTag;
+    }
     created() {
-      // this.tag = store.findTag(this.$route.params.id);
-       // TODO
-      // this.tag =  // store.findTag(this.$route.params.id);
+      const id = this.$route.params.id;
+      this.$store.commit('setCurrentTag', id);
       if (!this.tag) {
         this.$router.replace('/404');
       }
@@ -50,7 +51,7 @@
         // } else {
         //   window.alert('删除失败');
         // }
-        return 
+        return;
         // if (store.removeTag(this.tag.id)) {
         //   this.$router.back();
         // } else {
