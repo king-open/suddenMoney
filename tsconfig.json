@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false, // 原本的是 true 
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
