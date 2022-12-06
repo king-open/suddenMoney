@@ -24,7 +24,7 @@
     type = '-';
     interval = 'day';
     intervalList = intervalList;
-    recordTypeList = recordTypeList
+    recordTypeList = recordTypeList;
   }
 </script>
 
@@ -38,4 +38,7 @@
     }
   }
 }
+::v-deep .interval-tabs-item {
+    height: 48px;
+  }
 </style>
