@@ -49,7 +49,7 @@ import NumberPad from '@/components/Money/NumberPad.vue';
 </script>
 
 <style lang="scss" scoped>
-  .layout-content {
+  ::v-deep .layout-content {
     display: flex;
     flex-direction: column-reverse;
   }
